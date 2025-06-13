@@ -1,0 +1,150 @@
+/* Home.css */
+.home-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.login-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.home-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.home-video {
+    margin: 20px 0;
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007BFF; /* Bootstrap primary color */
+}
+/* Home.css */
+.home-container {
+    position: relative;
+    text-align: center;
+    color: rgb(52, 84, 245); /* Default text color for better visibility */
+    padding: 20px; /* Add some padding */
+}
+
+.media {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide overflow */
+}
+
+.home-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container fully */
+    transform: translate(-50%, -50%); /* Center the image */
+    z-index: -1; /* Send image behind text */
+}
+
+h1 {
+    font-size: 3em; /* Large font size for the main heading */
+    font-weight: bold; /* Bold text */
+    margin: 0; /* Remove default margin */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+}
+
+p {
+    font-size: 1.5em; /* Adjusted font size for the paragraph */
+    margin: 10px 0; /* Margin for spacing */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+}
+
+.login-button {
+    margin-top: 20px; /* Adjust spacing as needed */
+    padding: 10px 20px;
+    font-size: 1.2em; /* Increased font size for the button */
+    color: #fff; /* Button text color */
+    background-color: #007bff; /* Button background color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.login-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+/* Home.css */
+
+/* Existing styles... */
+
+.about-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.header-button {
+    margin: 10px;
+    padding: 10px 15px;
+    font-size: 1em;
+    color: white;
+    background-color: #007bff; /* Adjust color as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.ok-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

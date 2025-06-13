@@ -1,0 +1,98 @@
+{
+  "notifications": [
+    {
+      "id": 1,
+      "message": "Upcoming deadline for assignment submission: oct 9th"
+    },
+    {
+      "id": 2,
+      "message": "New update available for student records system"
+    },
+    {
+      "id": 3,
+      "message": "Reminder: Parent-teacher meetings start next week"
+    }
+  ],
+  "students": [
+    {
+      "id": 6,
+      "name": "Katie Harris",
+      "age": 15,
+      "class": "10",
+      "attendance": "80%",
+      "phoneNumber": "4321098765",
+      "bloodGroup": "B+",
+      "place": "Tirunelveli"
+    },
+    {
+      "id": 8,
+      "name": "Fahim",
+      "age": 17,
+      "class": "11",
+      "attendance": "89%",
+      "phoneNumber": "2109876543",
+      "bloodGroup": "AB+",
+      "place": "Vellore"
+    },
+    {
+      "id": 9,
+      "name": "Mervin",
+      "age": 15,
+      "class": "10",
+      "attendance": "87%",
+      "phoneNumber": "1098765432",
+      "bloodGroup": "A+",
+      "place": "Erode"
+    },
+    {
+      "id": 10,
+      "name": "Monish",
+      "age": 18,
+      "class": "12",
+      "attendance": "91%",
+      "phoneNumber": "0987654321",
+      "bloodGroup": "B-",
+      "place": "Kanchipuram"
+    },
+    {
+      "id": "1",
+      "name": "Harshavardhan",
+      "age": 18,
+      "class": "12",
+      "attendance": "92%",
+      "phoneNumber": "7654321098",
+      "bloodGroup": "O+",
+      "place": "Maduraai"
+    },
+    {
+      "id": 124,
+      "name": "Deepika",
+      "age": 16,
+      "class": 10,
+      "phoneNumber": "9876543210",
+      "bloodGroup": "A+",
+      "place": "Andhra",
+      "attendance": "89"
+    },
+    {
+      "id": 2543,
+      "name": "Mahesh",
+      "age": 18,
+      "class": 11,
+      "phoneNumber": "9876543212",
+      "bloodGroup": "A+",
+      "place": "coimbqtoere",
+      "attendance": "90"
+    },
+    {
+      "id": "50",
+      "name": "David Taylor",
+      "age": "17",
+      "class": "12",
+      "attendance": "92%",
+      "phoneNumber": "5432109876",
+      "bloodGroup": "A-",
+      "place": "Salem"
+    }
+  ]
+}

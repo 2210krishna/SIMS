@@ -1,0 +1,859 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+    background-color: #f4f4f9;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;
+  height: 100vh; 
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.dashboard {
+  height: auto; /* Use auto height to fit content */
+  max-height: 600px;
+  width: 100%; /* Full width */
+  max-width: 1200px;
+  border: 2px solid #227ddf;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 8px rgba(76, 24, 217, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0 auto; /* Center horizontally */
+  padding: 20px; /* Adjust padding as needed */
+  padding-bottom: 20px; /* Adjust bottom padding as needed */
+  position: relative; /* Position relative for any adjustments */
+}
+
+
+.dashboard .dashboard-header,
+.dashboard .dashboard-buttons {
+  margin-bottom: 10px; /* Adjust if needed */
+}
+
+
+.dashboard-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #2d40d1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dashboard-buttons button:hover {
+  background-color: #3327bf;
+}
+
+.student-records {
+  margin-top: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 10px;
+  text-align: left;
+}
+
+.student-records .record {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #eef;
+}
+
+.registration-form {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.registration-form h2 {
+  margin-bottom: 20px;
+}
+
+.registration-form form div {
+  margin-bottom: 15px;
+}
+
+.registration-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.registration-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.registration-form button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.registration-form button:hover {
+  background-color: #45a049;
+}
+
+input[type="text"] {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.notifications {
+  position: relative;
+  display: inline-block;
+}
+
+.notification-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+}
+
+.notifications {
+  position: relative; /* Make sure the dropdown is positioned relative to the button */
+}
+
+.notification-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1; /* Ensure the button is above other elements */
+}
+
+.notification-dropdown {
+  position: absolute;
+  top: 100%; /* Position it right below the button */
+  right: 0; /* Align to the right side of the button */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Set a fixed width */
+  z-index: 10; /* Ensure the dropdown is above other elements */
+}
+
+.notification-dropdown ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.notification-dropdown li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.notification-dropdown li:last-child {
+  border-bottom: none; /* Remove the border from the last item */
+}
+
+.notification-dropdown li:hover {
+  background-color: #f9f9f9;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out the elements */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 100px; /* Adjust size of the logo */
+  height: auto;
+  align-items: left;
+}
+
+.dashboard h2 {
+  flex: 1; /* Allow the heading to take up available space */
+  text-align: center;
+  color: #4CAF50;
+  margin: 0;
+}
+.student-records-container {
+  background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  max-width: 600px; /* Optional: Limit the width of the box */
+  margin: 20px auto; /* Center the box on the page */
+}
+
+.student-records-container h2 {
+  color: #4CAF50; /* Green color for the header */
+  margin-bottom: 20px;
+}
+
+.student-records-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.student-records-container li {
+  background-color: #fff; /* Pure white background for each record */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd; /* Light border for each record */
+  color: #333; /* Darker text color for better readability */
+}
+.about-us {
+  padding: 20px;
+  margin: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.about-us h2 {
+  margin-bottom: 10px;
+}
+
+.about-us p {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.gen {
+  background-color: blue; /* Blue background color */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 12px 24px; /* Increase size with padding */
+  font-size: 18px; /* Increase font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  width: auto; /* Auto width based on content */
+  max-width: 250px; /* Limit maximum width */
+  text-align: center; /* Center text */
+  display: inline-block; /* Align inline */
+}
+
+
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 0; 
+}
+
+.login-box {
+  background-color: #f0f0f0; 
+  opacity: 0.9;
+  padding: 60px; 
+  border-radius: 20px; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1); 
+  max-width: 400px; 
+  width: 100%; 
+}
+
+.login-box h2 {
+  color:#45a049;
+  text-align:center;
+  font-size: 3em; 
+  margin-bottom: 30px; 
+}
+
+.login-box label {
+  font-size: 1.2em; 
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  font-size: 1em; 
+  padding: 10px; 
+  margin-bottom: 20px; 
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+.login-box button {
+  font-size: 1.2em; 
+  padding: 10px 20px; 
+  background-color: #007bff; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+.login-box button:hover {
+  background-color: #0056b3; 
+}
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.login-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-box button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background-color: #0056b3;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-footer p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.dashboard {
+  flex: 1;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  margin-right: 15px;
+}
+
+.dashboard-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.dashboard-footer {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  margin-top: auto;
+}
+
+.dashboard-footer p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+.student-records-container {
+  position: relative;
+}
+
+.attendance-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+}
+
+.popup-content button {
+  margin-top: 20px;
+}
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-header p {
+  font-size: 1em;
+  color: #333;
+}
+
+.login-box {
+  background: #56c3e4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-box button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background-color: #0056b3;
+}
+
+.login-footer {
+  text-align: center;
+}
+
+.login-footer p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #333;
+}
+/* Styles for the LoginPage component */
+.login-page {
+  display: flex;
+  /* background-image: url(/Users/krishnakumar/Downloads/studentlogin.avif); */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f4f8;
+}
+
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+}
+
+.header-button {
+  background-color: white;
+  color: #0056b3;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header-button:hover {
+  background-color: #004080;
+  color: white;
+}
+
+.login-box {
+  background-color: rgb(90, 169, 215);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-box label {
+  display: block;
+  margin: 10px 0;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-box button {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-box button:hover {
+  background-color: #004080;
+}
+
+/* Header Styles */
+.login-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0056b3;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  z-index: 1000;
+}
+
+.header-button {
+  background-color: white;
+  color: #0056b3;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header-button:hover {
+  background-color: #004080;
+  color: white;
+}
+
+/* Login Box Styles */
+.login-box {
+  margin-top: 100px; /* Adjusted for the fixed header */
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+/* App.css or LoginPage.css */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.ok-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cont {
+  text-align: center; /* Center-align text and inline elements */
+}
+.student-details {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info {
+  margin-top: 20px;
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.update-button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 10px; /* Adds space between the buttons */
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+td {
+  text-align: left; /* Align buttons to the left of the cell */
+}
+
+.update-button, .delete-button {
+  display: inline-block; /* Ensure buttons are on the same line */
+  padding: 5px 10px;
+  margin-right: 10px; /* Space between buttons */
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+}
+
+.update-button {
+  background-color: blue;
+  color: white;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+}
+
+
+.student-records-container {
+  background-color: #fff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+ul.student-records-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.student-records-container li {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.student-records-container li div {
+  margin-bottom: 8px;
+}
+
+.student-records-container li input {
+  margin-left: 10px;
+  padding: 5px;
+  width: 200px; /* Fixed width for input fields */
+}
+
+.student-records-container li input[disabled] {
+  background-color: #f1f1f1;
+}
+
+.student-records-container .update-button,
+.student-records-container .edit-button,
+.student-records-container .delete-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.student-records-container .update-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.student-records-container .edit-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.student-records-container .delete-button {
+  background-color: #dc3545;
+  color: white;
+  margin-left: 10px;
+}
+
+.student-records-container .actions {
+  margin-top: 10px;
+}
