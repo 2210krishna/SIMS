@@ -12,7 +12,7 @@ const AboutUs = () => {
         <div className="about-us">
             <h2>About Our School</h2>
             <p>
-                Welcome to Elite high school, a place dedicated to nurturing young minds and fostering a love for learning...
+                Welcome to  high school, a place dedicated to nurturing young minds and fostering a love for learning...
             </p>
             <p>
                 At Elite high school, we offer a range of programs and extracurricular activities designed to cater to the diverse interests and needs of our students. Our experienced faculty and staff are dedicated to helping each student achieve their full potential.
